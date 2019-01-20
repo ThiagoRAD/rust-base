@@ -1,17 +1,29 @@
-use std::fs::OpenOptions;
-use std::io::Write;
-
 fn main() {
-  let mut file = OpenOptions::new()
-    .append(true)
-    .read(true)
-    .write(true)
-    .create(true)
-    .open("./my_file.txt")
-    .expect("Something went wrong opening the file");
-  let text = "We're making it happen!";
-  file.write_all(text.as_bytes()).expect("Something went wrong writing to the file");
+  let destination = "Long Lake";
+
+  match destination {
+    "Long Lake" => println!("Let's go to Long Lake!"),
+    "Sunny Beach" => println!("Let's go to Sunny Beach!"),
+    "Mountain View" => println!("Let's go to Mountain View!"),
+    _ => println!("Let's stay home!"),
+  }
 }
+
+
+// use std::fs::OpenOptions;
+// use std::io::Write;
+
+// fn main() {
+//   let mut file = OpenOptions::new()
+//     .append(true)
+//     .read(true)
+//     .write(true)
+//     .create(true)
+//     .open("./my_file.txt")
+//     .expect("Something went wrong opening the file");
+//   let text = "We're making it happen!";
+//   file.write_all(text.as_bytes()).expect("Something went wrong writing to the file");
+// }
 
 
 
