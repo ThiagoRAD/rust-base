@@ -1,10 +1,15 @@
-fn main() {
-  let mut packing_list = Vec::new();
-  packing_list.push("Sunglasses");
-  packing_list.push("Sunscreen");
-  packing_list.push("Hat");
-  println!("{:?}", packing_list);
+#[derive(Debug)]
+enum Steepness {
+  Easy, 
+  Moderate, 
+  Difficult,
+}
 
-  let second_packing_list = vec!["Sunglasses", "Sunscreen", "Hat"];
-  println!("{:?}", second_packing_list);
+fn main() {
+  let calm_trail = Steepness::Easy;
+  println!("Steepness is {:?}", calm_trail);
+  let fun_trail = Steepness::Moderate;
+  println!("Steepness is {:?}", fun_trail);
+  let pricly_peak_trail = Steepness::Difficult;
+  println!("Steepness is {:?}", pricly_peak_trail);
 }
