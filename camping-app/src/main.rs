@@ -1,8 +1,9 @@
+fn sentence_builder(person_info: (&str, u64, &str)) {
+  println!("{} is {}, and her last initial is {}.", person_info.0, person_info.1, person_info.2)
+}
+
 fn main() {
-  let mut new_year_countdown = 10;
-  while new_year_countdown > 0 {
-    println!("{}...", new_year_countdown);
-    new_year_countdown -= 1;
-  }
-  println!("Happy New Year!");
+  let person_info = ("Eve", 38, "P");
+  println!("{:?}", person_info);
+  sentence_builder(person_info);
 }
