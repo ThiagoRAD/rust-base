@@ -1,9 +1,10 @@
-fn sentence_builder(person_info: (&str, u64, &str)) {
-  println!("{} is {}, and her last initial is {}.", person_info.0, person_info.1, person_info.2)
-}
-
 fn main() {
-  let person_info = ("Eve", 38, "P");
-  println!("{:?}", person_info);
-  sentence_builder(person_info);
+  let mut packing_list = Vec::new();
+  packing_list.push("Sunglasses");
+  packing_list.push("Sunscreen");
+  packing_list.push("Hat");
+  println!("{:?}", packing_list);
+
+  let second_packing_list = vec!["Sunglasses", "Sunscreen", "Hat"];
+  println!("{:?}", second_packing_list);
 }
