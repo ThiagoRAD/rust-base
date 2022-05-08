@@ -1,13 +1,26 @@
 fn main() {
-  let destination = "Long Lake";
-
-  match destination {
-    "Long Lake" => println!("Let's go to Long Lake!"),
-    "Sunny Beach" => println!("Let's go to Sunny Beach!"),
-    "Mountain View" => println!("Let's go to Mountain View!"),
-    _ => println!("Let's stay home!"),
+  struct Hiker {
+    name: String, 
+    miles_hiked: u32,
   }
+
+  let billy = Hiker {
+    name: "Billy".to_string(),
+    miles_hiked: 32,
+  };
+
+  let Hiker { name, miles_hiked } = billy;
+
+  println!("{} has hiked {} miles", name, miles_hiked);
 }
+// let destination = "Long Lake";
+
+// match destination {
+//   "Long Lake" => println!("We're heading to Long Lake!"),
+//   "Mammoth Lakes" => println!("We're heading to Mammoth!"),
+//   "Bowman Lake" => println!("We're heading to Bowman Lake!"),
+//   _ => println!("Let's stay home!"),
+// }
 
 
 // use std::fs::OpenOptions;
