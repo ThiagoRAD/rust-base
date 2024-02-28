@@ -4,4 +4,5 @@ fn main() {
     println!("{}...", new_year_countdown);
     new_year_countdown -= 1;
   }
+  println!("Happy New Year!");
 }
