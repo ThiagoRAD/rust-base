@@ -1,9 +1,26 @@
-use std::fs;
+use std::fs::OpenOptions;
+use std::io::Write;
 
 fn main() {
-  let text = fs::read_to_string("./my_file.txt").expect("Something went wrong reading the file");
-  println!("What is in this file:\n{}", text);
+  let mut file = OpenOptions::new()
+    .append(true)
+    .read(true)
+    .write(true)
+    .create(true)
+    .open("./my_file.txt")
+    .expect("Something went wrong opening the file");
+  let text = "We're making it happen!";
+  file.write_all(text.as_bytes()).expect("Something went wrong writing to the file");
 }
+
+
+
+
+
+// fn main() {
+//   let text = fs::read_to_string("./my_file.txt").expect("Something went wrong reading the file");
+//   println!("What is in this file:\n{}", text);
+// }
 
 
 // struct Hiker {
