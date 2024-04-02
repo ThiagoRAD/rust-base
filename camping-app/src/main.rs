@@ -1,6 +1,6 @@
 fn calculate_distance(days: u64, distance: u64) -> Result<u64, String> {
   if days == 0 {
-    return Err(String::from("Days cannot be zero"));
+    return Err("Cannot go on a zero day hike".to_string());
   }
   let total_miles = days * distance;
   return Ok(total_miles);
