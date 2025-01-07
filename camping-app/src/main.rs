@@ -1,4 +1,7 @@
 fn main() {
-  let years: [i32; 3] = [2020, 2021, 2022];
-  println!("Years: {:?}", years);
+  let mut new_year_countdown = 10;
+  while new_year_countdown > 0 {
+    println!("{}...", new_year_countdown);
+    new_year_countdown -= 1;
+  }
 }
